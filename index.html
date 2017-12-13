@@ -1,16 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My first page</title>
+	<title>Домашнее задание 1</title>
 	<meta charset="utf-8">
 	<style type="text/css">
-		p {
-			color: green; font-size: 30px; font-style: italic;
+		div {
+			border: 2px solid red;
 		}
+		.divcenter {	/* Стиль для главного блока*/
+			margin: 8px auto;
+			width: 600px;
+			height: 100%;
+			border: 2px solid #d3d3d3;
+		}
+		table {
+			border: 2px solid green;
+		}
+		td {
+			border: 2px solid blue;
+		}
+
+		.headstyle {	/* Стиль для заголовка*/
+			background-color: #3d4f5b;
+			color: white;
+			font-size: 22px;
+			text-align: center;
+		}
+		.class1 {
+			float: left;
+		}
+		img {
+			width: 100px;
+		}
+
 	</style>
 </head>
 <body>
-	<p>Это моя страничка</p>
-
+	<div class="divcenter">	<!--Главный блок -->
+		<div class="headstyle">Curriculum vitae	<!--Заголовок -->
+		</div>
+		<div class="class1">	<!--Левая часть -->
+			<img src="https://defenders.org/sites/default/files/styles/large/public/tiger-dirk-freder-isp.jpg" alt="Фотка">
+			<table>
+				<tr>
+					<td>
+						Котофей Котофеич
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Люблю:
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Контакты
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			Дата рождения
+		</div>
+		<div>
+			Soft skill:
+		</div>
+		<div>
+			Обо мне:
+		</div>
+	</div>
+	
 </body>
 </html>

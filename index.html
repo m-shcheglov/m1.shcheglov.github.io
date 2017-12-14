@@ -13,6 +13,34 @@
 			height: 100%;
 			border: 2px solid #d3d3d3;
 		}
+		.headstyle {	/* Стиль для заголовка*/
+			background-color: #3d4f5b;
+			color: white;
+			height: 60px;
+			font-size: 22px;
+			text-align: center;
+		}
+		.centralbox {
+			display: table; 
+			width: 100%;
+    		height: 100%;
+			table-layout: fixed;
+		}
+		.leftbox {	/* Стиль для левой части*/
+			display: table-cell;
+			width: 25%;   
+		    height: 100%;
+		    flex: auto;
+		    border: 1px solid #ccc;
+		    background: linear-gradient(to right, #434343, #6E6E6E)
+		}
+		.rightbox {	/* Стиль для правой части*/
+			display: table-cell;
+			width: 75%;   
+		    height: 100%;
+		    flex: auto;
+		    border: 1px solid #ccc;
+		}
 		table {
 			border: 2px solid green;
 		}
@@ -20,17 +48,13 @@
 			border: 2px solid blue;
 		}
 
-		.headstyle {	/* Стиль для заголовка*/
-			background-color: #3d4f5b;
-			color: white;
-			font-size: 22px;
-			text-align: center;
-		}
-		.class1 {
-			float: left;
-		}
-		img {
+		
+		
+		.img {
+			border: 3px solid #d3d3d3; /* Прозрачная рамка */
+			border-radius: 25px;
 			width: 100px;
+			margin: 20px 20px;
 		}
 
 	</style>
@@ -39,34 +63,56 @@
 	<div class="divcenter">	<!--Главный блок -->
 		<div class="headstyle">Curriculum vitae	<!--Заголовок -->
 		</div>
-		<div class="class1">	<!--Левая часть -->
-			<img src="https://defenders.org/sites/default/files/styles/large/public/tiger-dirk-freder-isp.jpg" alt="Фотка">
-			<table>
-				<tr>
-					<td>
-						Котофей Котофеич
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Люблю:
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Контакты
-					</td>
-				</tr>
-			</table>
-		</div>
-		<div>
-			Дата рождения
-		</div>
-		<div>
-			Soft skill:
-		</div>
-		<div>
-			Обо мне:
+		<div class="centralbox">
+			<div class="leftbox">	<!--Левая часть -->
+					<img class="img" src="https://defenders.org/sites/default/files/styles/large/public/tiger-dirk-freder-isp.jpg" alt="Фотка">
+				<table>
+					<tr>
+						<td>
+							Котофей Котофеич
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Люблю:
+							<div>-----------</div>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							Контакты
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="rightbox">
+				<div>
+					<ul>
+						<li>Дата рождения:</li>
+						<li>1 января 2000г</li>
+						<li>Место рождения:</li>
+						<li>теплая печка</li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li>Soft skill:</li>
+						<li>Photoshop</li>
+						<li>Word</li>
+						<li>Paint</li>
+					</ul>
+					
+				</div>
+				<div>
+					<ul>
+						<li>Обо мне:</li>
+						<li>не курю</li>
+						<li>пью</li>
+					</ul>
+					
+				</div>
+			</div>
 		</div>
 	</div>
 	

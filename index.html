@@ -4,9 +4,6 @@
 	<title>Домашнее задание 1</title>
 	<meta charset="utf-8">
 	<style type="text/css">
-		div {
-			border: 2px solid red;
-		}
 		.divcenter {	/* Стиль для главного блока*/
 			margin: 8px auto;
 			width: 600px;
@@ -16,11 +13,13 @@
 		.headstyle {	/* Стиль для заголовка*/
 			background-color: #3d4f5b;
 			color: white;
-			height: 60px;
-			font-size: 22px;
+			height: 43px;
+			font-size: 25px;
 			text-align: center;
+			padding-top: 15px;
+			border: 1px solid transparent;
 		}
-		.centralbox {
+		.centralbox {	/* Стиль для центрального бокса*/
 			display: table; 
 			width: 100%;
     		height: 100%;
@@ -31,28 +30,82 @@
 			width: 25%;   
 		    height: 100%;
 		    flex: auto;
-		    border: 1px solid #ccc;
-		    background: linear-gradient(to right, #434343, #6E6E6E)
+		    border: 1px solid transparent;
+		    background: linear-gradient(to right, #434343, #6E6E6E);
+		    color: white;
+		    text-align: center;
 		}
-		.rightbox {	/* Стиль для правой части*/
+		.namestyle {	/* ФИО */
+			font-size: 30px;
+			text-align: left;
+			border-bottom-color: #FFFF00;	/* Желтая линия под ФИО */
+		    border-bottom-style: solid;
+		    border-bottom-width: 2px;
+		}
+		.indikator {
+			border: 1px solid transparent; /* Прозрачная рамка */
+			border-radius: 5px;
+			margin: 5px 0px;
+			font-size: 10px;
+		}
+		.colorind1{		/* Стиль сметаны */
+			background-color: #FFA500;
+			width: 70%;
+		}
+		.colorind2 {	/* Стиль молока */
+			background-color: #0174DF;
+			width: 50%;
+		}
+		.colorind3 {	/* Стиль пивасика */
+			background-color: #008000;
+			width: 90%;
+		}
+		.textunder {	/* Подчеркивание */
+			text-decoration: underline;
+			margin: 20px auto;
+		}
+		table {		/* Стиль таблицы левой части */
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.rightbox {		/* Стиль для правой части*/
 			display: table-cell;
 			width: 75%;   
 		    height: 100%;
+		    padding-top: 5px;
 		    flex: auto;
-		    border: 1px solid #ccc;
 		}
-		table {
-			border: 2px solid green;
+		.bottonline {	/* Подчеркивание синей линией */
+			margin-left: 5px;
+			margin-right: 10px;
+		    border-bottom-color: #0080FF;
+		    border-bottom-style: solid;
+		    border-bottom-width: 2px;
 		}
-		td {
-			border: 2px solid blue;
+		ul {	/* отступ в списке и выравнивание слева */
+			padding-left: 30px;
+			text-align: left;
 		}
-
-		
-		
-		.img {
-			border: 3px solid #d3d3d3; /* Прозрачная рамка */
-			border-radius: 25px;
+		.urlcolor {		/* Цвет ссылок */
+			color: #00BFFF;
+		}
+		.lul {	/* Стиль списков в правой части */
+			color: #084B8A;
+			font-size: 18px;
+			list-style: none; /* Скрываем маркеры списка */
+			padding-left: 5ыpx;
+		}
+		/*li::before {
+			content: '-'; /* Добавляем маркер в шестнадцатеричном формате*/
+    		/*padding-right: 5px; /* Расстояние от маркеров до текста */
+		/*}*/
+		.limarker {		/* Жирный текст */
+			font: bold;
+			list-style: none;
+		}
+		.img {	/* Стиль картинки */
+			border: 2px solid #d3d3d3; 
+			border-radius: 40px;
 			width: 100px;
 			margin: 20px 20px;
 		}
@@ -65,50 +118,57 @@
 		</div>
 		<div class="centralbox">
 			<div class="leftbox">	<!--Левая часть -->
-					<img class="img" src="https://defenders.org/sites/default/files/styles/large/public/tiger-dirk-freder-isp.jpg" alt="Фотка">
+					<img class="img" src="https://data.whicdn.com/images/70433076/original.png" alt="Фотка">
 				<table>
 					<tr>
-						<td>
+						<td class="namestyle">
 							Котофей Котофеич
 						</td>
 					</tr>
 					<tr>
 						<td>
-							Люблю:
-							<div>-----------</div>
+							<div class="textunder">Люблю:</div>
+							<div class="indikator colorind1">Сметанку</div>
+							<div class="indikator colorind2">Молочко</div>
+							<div class="indikator colorind3">Пивасик</div>
 						</td>
 					</tr>
 
 					<tr>
 						<td>
-							Контакты
+							<div class="textunder">Контакты</div>
+							<ul>
+								<li><a class="urlcolor" href="http://vk.com" target="_blank">Vk</а></li>
+								<li><a class="urlcolor" href="http://ok.ru" target="_blank">Ok</а></li>
+								<li><a class="urlcolor" href="http://facebook.com" target="_blank">Facebook</а></li>
+							</ul>
 						</td>
 					</tr>
 				</table>
 			</div>
 			<div class="rightbox">
-				<div>
-					<ul>
-						<li>Дата рождения:</li>
+				<div class="bottonline">
+					<ul class="lul">
+						<li class="limarker"><b>Дата рождения:</b></li>
 						<li>1 января 2000г</li>
-						<li>Место рождения:</li>
+						<li class="limarker">Место рождения:</li>
 						<li>теплая печка</li>
 					</ul>
 				</div>
-				<div>
-					<ul>
+				<div class="bottonline">
+					<ul class="lul">
 						<li>Soft skill:</li>
-						<li>Photoshop</li>
-						<li>Word</li>
-						<li>Paint</li>
+						<li style="limarker">- Photoshop</li>
+						<li>- Word</li>
+						<li>- Paint</li>
 					</ul>
 					
 				</div>
-				<div>
-					<ul>
+				<div class="bottonline">
+					<ul class="lul">
 						<li>Обо мне:</li>
-						<li>не курю</li>
-						<li>пью</li>
+						<li>- не курю</li>
+						<li>- пью</li>
 					</ul>
 					
 				</div>

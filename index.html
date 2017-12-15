@@ -9,6 +9,7 @@
 			width: 600px;
 			height: 100%;
 			border: 2px solid #d3d3d3;
+			font-family: sans-serif;
 		}
 		.headstyle {	/* Стиль для заголовка*/
 			background-color: #3d4f5b;
@@ -26,17 +27,16 @@
 			table-layout: fixed;
 		}
 		.leftbox {	/* Стиль для левой части*/
-			display: table-cell;
-			width: 25%;   
-		    height: 100%;
-		    flex: auto;
+			width: 25%;
+			height: 100%;
 		    border: 1px solid transparent;
 		    background: linear-gradient(to right, #434343, #6E6E6E);
 		    color: white;
 		    text-align: center;
+		    float: left;
 		}
 		.namestyle {	/* ФИО */
-			font-size: 30px;
+			font-size: 28px;
 			text-align: left;
 			border-bottom-color: #FFFF00;	/* Желтая линия под ФИО */
 		    border-bottom-style: solid;
@@ -69,11 +69,9 @@
 			padding-right: 10px;
 		}
 		.rightbox {		/* Стиль для правой части*/
-			display: table-cell;
 			width: 75%;   
 		    height: 100%;
-		    padding-top: 5px;
-		    flex: auto;
+		    margin-left: 25%;
 		}
 		.bottonline {	/* Подчеркивание синей линией */
 			margin-left: 5px;
@@ -83,7 +81,7 @@
 		    border-bottom-width: 2px;
 		}
 		ul {	/* отступ в списке и выравнивание слева */
-			padding-left: 30px;
+			padding-left: 10px;
 			text-align: left;
 		}
 		.urlcolor {		/* Цвет ссылок */
@@ -100,8 +98,7 @@
     		/*padding-right: 5px; /* Расстояние от маркеров до текста */
 		/*}*/
 		.limarker {		/* Жирный текст */
-			font: bold;
-			list-style: none;
+			font-weight: bold;
 		}
 		.img {	/* Стиль картинки */
 			border: 2px solid #d3d3d3; 
@@ -116,7 +113,7 @@
 	<div class="divcenter">	<!--Главный блок -->
 		<div class="headstyle">Curriculum vitae	<!--Заголовок -->
 		</div>
-		<div class="centralbox">
+		<div class="centralbox"> 	<!-- центральная часть-->
 			<div class="leftbox">	<!--Левая часть -->
 					<img class="img" src="https://data.whicdn.com/images/70433076/original.png" alt="Фотка">
 				<table>
@@ -127,7 +124,7 @@
 					</tr>
 					<tr>
 						<td>
-							<div class="textunder">Люблю:</div>
+							<div class="textunder limarker">Люблю:</div>
 							<div class="indikator colorind1">Сметанку</div>
 							<div class="indikator colorind2">Молочко</div>
 							<div class="indikator colorind3">Пивасик</div>
@@ -136,7 +133,7 @@
 
 					<tr>
 						<td>
-							<div class="textunder">Контакты</div>
+							<div class="textunder limarker">Контакты</div>
 							<ul>
 								<li><a class="urlcolor" href="http://vk.com" target="_blank">Vk</а></li>
 								<li><a class="urlcolor" href="http://ok.ru" target="_blank">Ok</а></li>
@@ -146,10 +143,10 @@
 					</tr>
 				</table>
 			</div>
-			<div class="rightbox">
+			<div class="rightbox">	<!-- Правая часть-->
 				<div class="bottonline">
 					<ul class="lul">
-						<li class="limarker"><b>Дата рождения:</b></li>
+						<li class="limarker">Дата рождения:</li>
 						<li>1 января 2000г</li>
 						<li class="limarker">Место рождения:</li>
 						<li>теплая печка</li>
@@ -157,8 +154,8 @@
 				</div>
 				<div class="bottonline">
 					<ul class="lul">
-						<li>Soft skill:</li>
-						<li style="limarker">- Photoshop</li>
+						<li class="limarker">Soft skill:</li>
+						<li>- Photoshop</li>
 						<li>- Word</li>
 						<li>- Paint</li>
 					</ul>
@@ -166,7 +163,7 @@
 				</div>
 				<div class="bottonline">
 					<ul class="lul">
-						<li>Обо мне:</li>
+						<li class="limarker">Обо мне:</li>
 						<li>- не курю</li>
 						<li>- пью</li>
 					</ul>

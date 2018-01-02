@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Домашняя работа по JS</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+
+		#divcenter {	/* Стиль для главного блока*/
+			margin: auto;
+			margin-top: 15%;
+			width: 400px;
+			border: 5px solid #999999;
+			font-family: sans-serif;
+			font-size: 25px;
+			text-align: center;
+			background: #0FF;
+		}
+
+		.divtext {
+			margin: 15px auto;
+		}
+
+		input[type="text"], input[type="button"]  {
+			height: 30px;
+			font-size: 24px;
+			width: 100px;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+
+			var i = 10;		//счетчик попыток
+			var randomNum = Math.ceil(Math.random()*100);	//загадывам число
+
+		window.onload = function() {
+			var infoArea = document.getElementById("info");
+			var countArea = document.getElementById("counterId");
+			
+			infoArea.innerHTML = "Введите число от 1 до 100";
+			countArea.innerHTML = ("Осталось попыток: " + i + " из 10");
+		}
+
+		function verify() {
+			var output = document.getElementById("info");
+			var userInput = document.getElementById("userInput");
+			var countArea = document.getElementById("counterId");
+			//console.log(randomNum, userInput.value,  i); //это для отладки (загаданное число, введенное число, значение счетчика)
+
+				if (!isNaN(userInput.value) && userInput.value <=100 && userInput.value > 0) {	//проверка на на число и диапазон от 1 до 100
+					output.style.color = "green";
+
+					if (userInput.value == randomNum) {
+						output.innerHTML = "Вы угадали";
+						output.style.color = "red";
+						divcenter.style.backgroundColor = "limegreen";
+						divcenter.style.borderColor = "navy";
+						guessBtn.disabled = true;
+					} else {
+
+						if (userInput.value < randomNum) {
+							output.innerHTML = "Ваше число меньше загаданного";
+							i--;
+							countArea.innerHTML = ("Осталось попыток: " + i + " из 10");
+						} else {
+							output.innerHTML = "Ваше число больше загаданного";
+							i--;
+							countArea.innerHTML = ("Осталось попыток: " + i + " из 10");
+						}
+					}
+
+				} else {
+					output.innerHTML = "Введите число от 1 до 100";
+					output.style.color = "red";
+				}
+
+			if (i == 0) {	//окончание попыток
+				output.innerHTML = "Вы проиграли";
+				output.style.color = "red";
+				divcenter.style.backgroundColor = "khaki";
+				divcenter.style.borderColor = "red";
+				guessBtn.disabled = true;
+			}
+		}
+
+	</script>
+</head>
+
+<body>
+	<div id="divcenter">
+		<div class="divtext">Угадай число</div>
+			<div>
+				<input type="text" id="userInput" value="0" />
+			</div>
+			<div>
+				<input type="button" id="guessBtn" value="Угадать" onclick="verify()" />
+			</div>
+		<div class="divtext" id="info"></div>
+		<div class="divtext" id="counterId"></div>
+	</div>
+</body>
+</html>
